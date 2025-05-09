@@ -1,10 +1,15 @@
 from imap_tools import MailBox,AND
 import pandas as pd 
 import re
+from dotenv import load_dotenv
+import os 
 
-usr = 'muhammad.yousef7489@gmail.com'
-pwd = 'qozf nxkh tnve bpad'
 
+load_dotenv()
+
+
+usr = os.getenv('USER_EMAIL')
+pwd = os.getenv('USER_CREDS')
 
 def extract(term, text):
     try:
